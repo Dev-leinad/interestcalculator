@@ -1,0 +1,290 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 16px;
+  position: relative;
+}
+
+.wrapper {
+  width: 100%;
+  position: relative;
+  width: 100%;
+}
+
+.col {
+  padding: 20px;
+  width: 100%;
+  height: fit-content;
+}
+
+.col .mortage-head{
+    padding: 20px 0;
+    font-size: 20px;
+    color: hsl(202, 55%, 16%);
+}
+
+.col .mortage-head button{
+    border: none;
+    background-color: transparent;
+    color: hsl(200, 26%, 54%);
+    cursor: pointer;
+    font-size: 15px;
+    text-transform: capitalize;
+    outline: none;
+    text-decoration: underline;
+
+}
+
+
+form{
+    width: 100%;
+
+    position: relative;
+    display: block;
+}
+
+label{
+     font-size: 16px;
+     color:hsl(200, 26%, 54%); 
+}
+
+.mortage-amount{
+    width: 100%;
+    position: relative;
+    margin: 2px 0  16px; 
+    padding-bottom: 6px; 
+  
+}
+
+ .input-wrapper{
+    position: relative;
+    width: 100%;
+    border: 1px solid hsl(200, 24%, 40%);    
+    border-radius: 6px;
+    margin: 6px 0 2px;
+    display: flex;
+}
+
+.error-msg{
+    border: 1px solid red;
+}
+
+.mortage-amount .input-wrapper span{
+    width: 10%;
+    height: inherit;
+    background-color: hsl(202, 86%, 94%);
+    color: hsl(202, 55%, 16%);
+    text-align: center;
+    padding-top: 8px;
+}
+
+.mortage-amount .input-wrapper input{
+    width: 80%;
+}
+
+
+.terms-wrapper{
+    width: 100%;
+    position: relative;
+    display: block;
+    
+}
+.terms-wrapper .mortage-term{
+    width: 100%;
+    position: relative;
+    margin: 2px 0  16px; 
+    padding-bottom: 6px; 
+  
+
+}
+.mortage-term .input-wrapper span{
+    background-color: hsl(202, 86%, 94%);
+    color: hsl(202, 55%, 16%);
+    width: 20%;
+    text-align:center;
+    font-weight: 600;
+    padding-top: 6px;
+}
+
+.mortage-term .input-wrapper  input{
+    width: 80%;
+}
+
+
+.mortage-rate .input-wrapper span{
+    background-color: hsl(202, 86%, 94%);
+    color: hsl(202, 55%, 16%);
+    width: 20%;
+    text-align:center;
+    font-weight: 600;
+    padding-top: 6px;
+}
+.error{
+    font-size: 12px;
+    color: red;
+}
+.mortage-rate .input-wrapper  input{
+    width: 80%;
+}
+input{
+    border:none;
+    outline: none;
+    padding: 8px;
+    height: 40px;
+}
+
+.mortage-type{
+    width: 100%;
+    padding:12px 0;
+    display: block;
+}
+.mortage-type p{
+  font-size: 22px;
+}
+
+
+.repay-type{
+    margin: 12px 0 ;
+    gap:12px;
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+    border: 1px solid hsl(200, 24%, 40%);    
+    border-radius: 6px;
+    
+}
+
+.repay-type input {
+    width: 20px;
+}
+.repay-type label{
+    font-size: 18px;
+}
+form .calculate{
+    width: 100%;
+    border-radius: 20px;
+    background-color: hsl(61, 70%, 52%);
+    padding: 12px;
+    outline: none;
+    height: 50px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    gap: 6px;
+    border: none;
+    font-size: 22px;
+    position: relative;
+    font-weight: 600;
+    margin: 16px 0 0;
+    align-self: center;
+}
+/* Mortage result display */
+.mortage-result{
+    background-color: hsl(200, 24%, 40%);
+    width: 100%;
+
+}
+.mortage-result .result-wrapper{
+    padding: 0 0 32px;
+}
+.mortage-result .result-wrapper h3{
+    color: hsl(0, 10%, 100%);
+    font-size: 26px;
+    line-height: 1.5;
+    padding: 12px 0;
+
+}
+
+.mortage-result .result-wrapper p{
+    color:  hsl(202, 86%, 94%);
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.repayment-stats-wrapper{
+    width: 100%;
+    border-top: 4px solid hsl(61, 70%, 52%) ;
+    border-radius: 6px;
+    background-color: hsl(202, 55%, 16%);
+    height: 250px;
+    padding: 10px;
+}
+
+.repayment-stats-wrapper .month-repayment{
+    width: 100%;
+    height: 100px;
+    align-self: center;
+
+
+}
+.repayment-stats-wrapper .month-repayment p{
+    font-size: 20px;
+    color: hsl(0, 10%,100%);
+    font-weight: 600;
+    margin: 12px 0;
+
+}
+
+.repayment-stats-wrapper .month-repayment h2{
+    font-size: 26px;
+    color: hsl(61, 70%, 52%);
+    font-weight: 600;
+    margin-top:20px;
+    
+}
+
+.repayment-stats-wrapper .total-repayment{
+    padding: 0 0 6px;
+    height: 120px;
+    width: 100%;
+}
+
+.repayment-stats-wrapper .total-repayment p {
+    padding: 16px 0 ;
+    color: hsl(202, 86%, 94%);
+}
+
+
+.repayment-stats-wrapper .total-repayment h2{
+    color: hsl(0, 10%, 100%);
+    margin-top: 10px;
+}
+
+
+@media (min-width:768px) {
+    .wrapper{
+        display: flex;
+        flex-direction: row;
+        height: 100vh;
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    form .calculate{
+        width: 60%;
+        font-size: 18px;
+    }
+
+    .mortage-result{
+        height: 100vh;
+    }
+
+    .terms-wrapper{
+        display: flex;
+        gap: 10px;
+    }
+    .terms-wrapper .mortage-term{
+        width: 50%;
+    }
+    .mortage-rate{
+        width: 50%;
+    }
+}
