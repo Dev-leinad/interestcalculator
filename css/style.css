@@ -188,19 +188,30 @@ form .calculate{
 }
 /* Mortage result display */
 .mortage-result{
-    background-color: hsl(200, 24%, 40%);
+    background-color: hsl(200, 32%, 26%);
     width: 100%;
+    min-height: 300px;
 
 }
 .mortage-result .result-wrapper{
-    padding: 0 0 32px;
+     padding: 0 0 32px;
+    width: 100%;
+    display: none;
 }
+
+/* .show{
+    display:block;
+   
+} */
 .mortage-result .result-wrapper h3{
     color: hsl(0, 10%, 100%);
     font-size: 26px;
     line-height: 1.5;
     padding: 12px 0;
 
+}
+.hide-empty{
+    display: none;
 }
 
 .mortage-result .result-wrapper p{
@@ -256,6 +267,25 @@ form .calculate{
 .repayment-stats-wrapper .total-repayment h2{
     color: hsl(0, 10%, 100%);
     margin-top: 10px;
+}
+
+.empty-wrapper{
+    padding: 20px;
+    /* margin: 0 auto; */
+    width: 100%;
+    color: hsl(0, 5%, 83%);
+    height: 100%;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.empty-wrapper img{
+    width: 60%;
+    margin: 0 auto;
+    justify-self: center;
 }
 
 

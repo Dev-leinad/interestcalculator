@@ -1,105 +1,127 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>interestApp:Home</title>
-  
-    <link rel="stylesheet" href="css/style.css">
-      <style>
-        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
-        </style>
-</head>
-<body>
 
+    <link rel="stylesheet" href="css/style.css" />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap");
+    </style>
+  </head>
+  <body>
     <div class="wrapper">
-        <div class="col mortage-container">
-            <div class="mortage-head">
-                 <h3>Mortage Calculator</h3>
-                 <button id='clearBtn'>clear All</button>
-            </div>
-
-            <form action="#">
-                <div class="mortage-amount ">
-                    <label for="mortage-amount">Mortage Amount</label>
-                    <div class=" input-wrapper" id="input-amount-wrapper">
-                        <span>$</span>
-                        <input type="text" id="amount-input">
-                    </div>
-                    <span class="error" id="amountErrorMsg"></span>
-                </div>
-
-                <div class="terms-wrapper">
-                    <div class="mortage-term">
-                    <label for="mortage-term">Mortage Term</label>
-                    <div class=" input-wrapper " id=" input-year-wrapper">
-                        
-                        <input type="text" id="years-input" >
-                        <span  id="years" >years</span>
-                    </div>
-                    <span class="error" id="yearErrorMsg"></span>
-                </div>
-                <div class="mortage-rate ">
-                    <label for="mortage-rate">Interest Rate</label>
-                    <div class="input-wrapper " id="input-rate-wrapper">
-                        
-                        <input type="text " id="rate">
-                        <span class="" id="rate">%</span>
-                    </div>
-
-                    <span class="error" id="rateErrorMsg"></span>
-                </div>
-                </div>
-                
-
-                <div class="mortage-type">
-                    <p >Mortage Type</p>
-                   
-
-                    <div class="repay-type">
-                       <input type="radio" name="mortage-type" id="repayment" value="repayment">
-                      <label for="repayments">Repayments</label> 
-                    </div>
-                    <div class="repay-type">
-                       <input type="radio" name="mortage-type" id="interest" value="interest">
-                      <label for="interest">Interest Only</label> 
-                    </div>
-
-
-                      
-
-                    
-                     
-                </div>
-
-                <button id="calculate" class="calculate"><span><img src="images/icon-calculator.svg" alt=""></span>Calculate Repayments</button>
-            </form>
-
+      <div class="col mortage-container">
+        <div class="mortage-head">
+          <h3>Mortage Calculator</h3>
+          <button id="clearBtn">clear All</button>
         </div>
-        <div class="col mortage-result">
-            <div class="result-wrapper">
-                <h3>Your results</h3>
-                <p>Your results are shown below based on the information you provided. To adjust the results, edit the form and click "calculate repayments" again.</p>
+
+        <form action="#">
+          <div class="mortage-amount">
+            <label for="mortage-amount">Mortage Amount</label>
+            <div class="input-wrapper" id="input-amount-wrapper">
+              <span>$</span>
+              <input type="text" id="amount-input" />
+            </div>
+            <span class="error" id="amountErrorMsg"></span>
+          </div>
+
+          <div class="terms-wrapper">
+            <div class="mortage-term">
+              <label for="mortage-term">Mortage Term</label>
+              <div class="input-wrapper" id=" input-year-wrapper">
+                <input type="text" id="years-input" />
+                <span id="years">years</span>
+              </div>
+              <span class="error" id="yearErrorMsg"></span>
+            </div>
+            <div class="mortage-rate">
+              <label for="mortage-rate">Interest Rate</label>
+              <div class="input-wrapper" id="input-rate-wrapper">
+                <input type="text " id="rate" />
+                <span class="" id="rate">%</span>
+              </div>
+
+              <span class="error" id="rateErrorMsg"></span>
+            </div>
+          </div>
+
+          <div class="mortage-type">
+            <p>Mortage Type</p>
+
+            <div class="repay-type">
+              <input
+                type="radio"
+                name="mortage-type"
+                id="repayment"
+                value="repayment"
+              />
+              <label for="repayments">Repayments</label>
+            </div>
+            <div class="repay-type">
+              <input
+                type="radio"
+                name="mortage-type"
+                id="interest"
+                value="interest"
+              />
+              <label for="interest">Interest Only</label>
             </div>
 
-            <div class="repayment-stats-wrapper">
-                <div class="month-repayment">
-                    <p>Your monthly repayments</p>
-                    <h2 id='monthly-repay'></h2>
-                </div>
-                <hr>
-                <div class="total-repayment">
-                    <p>Total you'll repay over the term</p>
-                    <h2 id="total-repay"></h2>
-                </div>
-            </div>
+            <span id="repay-type-error"></span>
+          </div>
 
-        </div>
+          <button id="calculate" class="calculate">
+            <span><img src="images/icon-calculator.svg" alt="" /></span
+            >Calculate Repayments
+          </button>
+        </form>
+      </div>
+      <div class="col mortage-result">
+        <!---->
+        <div class="result-wrapper" id="result-wrapper">
+            <h3>Your results</h3>
+            <p>
+              Your results are shown below based on the information you provided.
+              To adjust the results, edit the form and click "calculate
+              repayments" again.
+            </p>
+         
+  
+          <div class="repayment-stats-wrapper">
+            <div class="month-repayment">
+              <p>Your monthly repayments</p>
+              <h2 id="monthly-repay"></h2>
+            </div>
+            <hr />
+            <div class="total-repayment">
+              <p>Total you'll repay over the term</p>
+              <h2 id="total-repay">8988</h2>
+            </div> 
+         </div>
+         </div>
+
+     
+
+        <!-- </div> -->
+         
+        <!-- Empty Field -->
+
+       <div class="empty-wrapper" id="empty-wrapper">
+
+            <img src="images/illustration-empty.svg" alt="illustration-empty">
+
+            <h3>Results shown here</h3>
+            <p>complete the form and click 'calculate repayments' to see what your monthly repayments would be. </p>
+        </div> 
+     
     </div>
-    
-
-
 
     <script src="js/main.js"></script>
-</body>
+
+
+
+  </body>
 </html>
