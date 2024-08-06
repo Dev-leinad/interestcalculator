@@ -26,8 +26,8 @@ body {
 }
 
 .col .mortage-head{
-    padding: 20px 0;
-    font-size: 20px;
+    padding: 10px 0;
+    font-size: 30px;
     color: hsl(202, 55%, 16%);
 }
 
@@ -66,6 +66,7 @@ label{
 
  .input-wrapper{
     position: relative;
+    padding: 1px;
     width: 100%;
     border: 1px solid hsl(200, 24%, 40%);    
     border-radius: 6px;
@@ -156,15 +157,68 @@ input{
     gap:12px;
     display: flex;
     align-items: center;
-    padding-left: 20px;
+    padding: 10px;
     border: 1px solid hsl(200, 24%, 40%);    
     border-radius: 6px;
     
 }
 
+/* .custom-radio {
+    display:none;
+}
+.custom-label {
+    display: inline-block;
+    padding: 5px 0;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 2px solid #ccc;
+    position: relative;
+    cursor: pointer;
+}
+
+.custom-label::after {
+    content: '';
+    display: block;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: transparent;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: background 0.3s;
+}
+
+.custom-radio:checked + .custom-label {
+    border-color: rgb(243, 119, 119);
+    outline: none ;
+}
+
+.custom-radio:checked + .custom-label::after {
+    background: rgb(240, 175, 175);
+} */
+
+.repay-type:hover{
+    border:1px solid rgb(197, 197, 97);
+}
+
+.repay-type:has(input:checked){
+    border:1px solid rgb(197, 197, 97);
+    background-color: rgb(241, 227, 187) ;
+}
+
 .repay-type input {
     width: 20px;
+    background-color: red;
 }
+
+.repay-type input:has(input:checked) {
+    width: 20px;
+    
+}
+
 .repay-type label{
     font-size: 18px;
 }
@@ -194,30 +248,32 @@ form .calculate{
 
 }
 .mortage-result .result-wrapper{
-     padding: 0 0 32px;
+     padding: 0 0 10px;
     width: 100%;
     display: none;
 }
 
-/* .show{
-    display:block;
-   
-} */
+
 .mortage-result .result-wrapper h3{
     color: hsl(0, 10%, 100%);
     font-size: 26px;
     line-height: 1.5;
-    padding: 12px 0;
+    margin-bottom: 10px;
+    padding: 10px 0;
 
 }
+
+
 .hide-empty{
     display: none;
 }
 
 .mortage-result .result-wrapper p{
     color:  hsl(202, 86%, 94%);
-    font-size: 16px;
+    font-size: 20px;
     line-height: 1.5;
+    margin-bottom: 18px;
+    text-align: justify;
 }
 
 .repayment-stats-wrapper{
@@ -281,7 +337,19 @@ form .calculate{
     justify-content: center;
     text-align: center;
 }
+.empty-wrapper h3{
+    margin-bottom: 10px;
+    color: white;
+    font-size: 24px;
 
+}
+
+
+.empty-wrapper p {
+    font-size: 18px;
+    line-height: 1.5;
+    padding: 12px;
+}
 .empty-wrapper img{
     width: 60%;
     margin: 0 auto;
@@ -317,4 +385,24 @@ form .calculate{
     .mortage-rate{
         width: 50%;
     }
+}
+
+@keyframes customAnimation {
+    0% {
+
+        transform: scale(0.5) rotate(0deg);
+        opacity: 0;
+    }
+    50% {
+        transform: scale(0.7) rotate(180deg);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1) rotate(360deg);
+        opacity: 1;
+    }
+}
+
+.animate {
+    animation: customAnimation 2s ease-in-out forwards;
 }

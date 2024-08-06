@@ -11,7 +11,8 @@
     </style>
   </head>
   <body>
-    <div class="wrapper">
+
+    <div class="wrapper" id="wrapper">
       <div class="col mortage-container">
         <div class="mortage-head">
           <h3>Mortage Calculator</h3>
@@ -22,8 +23,8 @@
           <div class="mortage-amount">
             <label for="mortage-amount">Mortage Amount</label>
             <div class="input-wrapper" id="input-amount-wrapper">
-              <span>$</span>
-              <input type="text" id="amount-input" />
+              <span id="amount-span">$</span>
+              <input type="text" id="amount-input" autocomplete ='off' />
             </div>
             <span class="error" id="amountErrorMsg"></span>
           </div>
@@ -31,17 +32,17 @@
           <div class="terms-wrapper">
             <div class="mortage-term">
               <label for="mortage-term">Mortage Term</label>
-              <div class="input-wrapper" id=" input-year-wrapper">
-                <input type="text" id="years-input" />
-                <span id="years">years</span>
+              <div class="input-wrapper" id="year-wrapper">
+                <input type="text" id="years-input" autocomplete="off" />
+                <span id="year-span">years</span>
               </div>
               <span class="error" id="yearErrorMsg"></span>
             </div>
             <div class="mortage-rate">
               <label for="mortage-rate">Interest Rate</label>
               <div class="input-wrapper" id="input-rate-wrapper">
-                <input type="text " id="rate" />
-                <span class="" id="rate">%</span>
+                <input type="text " id="rate"autocomplete="off" />
+                <span class="" id="rate-span">%</span>
               </div>
 
               <span class="error" id="rateErrorMsg"></span>
@@ -57,8 +58,10 @@
                 name="mortage-type"
                 id="repayment"
                 value="repayment"
+                class="custom-radio"
               />
-              <label for="repayments">Repayments</label>
+              <label for="repayments"  class="custom-label">Repayments</label>
+              
             </div>
             <div class="repay-type">
               <input
@@ -66,8 +69,10 @@
                 name="mortage-type"
                 id="interest"
                 value="interest"
+                class="custom-radio"
               />
-              <label for="interest">Interest Only</label>
+              <label for="interest" class="custom-label"> Interest Only </label>
+             
             </div>
 
             <span id="repay-type-error"></span>
@@ -111,10 +116,10 @@
 
        <div class="empty-wrapper" id="empty-wrapper">
 
-            <img src="images/illustration-empty.svg" alt="illustration-empty">
+            <img src="images/illustration-empty.svg" alt="illustration-empty" id='animatedImage' >
 
             <h3>Results shown here</h3>
-            <p>complete the form and click 'calculate repayments' to see what your monthly repayments would be. </p>
+            <p>Complete the form and click 'calculate repayments' to see what your monthly repayments would be. </p>
         </div> 
      
     </div>
